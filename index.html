@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Monospace Journal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="loading">
+    <div class="modal-overlay" id="welcomeModal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Welcome to Monospace Journal</h2>
+        <p>Here are some helpful shortcuts you can use:</p>
+
+        <div class="shortcut-row">
+          <div class="shortcut-key">Ctrl+Enter</div>
+          <div class="shortcut-description">Submit new post</div>
+        </div>
+
+        <div class="shortcut-row">
+          <div class="shortcut-key">Escape</div>
+          <div class="shortcut-description">Close new post form</div>
+        </div>
+
+        <div class="shortcut-row">
+          <div class="shortcut-key">
+            <i class="ri-moon-line"></i>/<i class="ri-sun-line"></i>
+          </div>
+          <div class="shortcut-description">Switch between light/dark mode</div>
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.9rem">
+          Your posts are saved automatically in your browser's local storage.
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="confirmationModal">
+      <div class="modal-content confirmation-modal">
+        <button class="close-modal" id="closeConfirmationModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Are you sure?</h2>
+        <p id="confirmationMessage">This action cannot be undone.</p>
+        <div class="confirmation-buttons">
+          <button id="confirmActionBtn">Confirm</button>
+          <button id="cancelActionBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <h1>MONOSPACE JOURNAL</h1>
+      <div class="controls">
+        <button id="newPostBtn">NEW POST</button>
+        <button id="clearBtn" class="warning">CLEAR ALL</button>
+      </div>
+    </header>
+
+    <div class="post-form" id="postForm">
+      <input type="text" id="postTitle" placeholder="Post Title" />
+      <textarea
+        id="postContent"
+        placeholder="Write your thoughts here..."
+      ></textarea>
+      <button id="submitPostBtn" class="success">PUBLISH</button>
+    </div>
+
+    <div class="posts" id="postsContainer">
+
+    </div>
+
+    <div class="theme-toggle" id="themeToggle">
+        <i class="ri-moon-line"></i>
+    </div>
+
+    <footer>
+      HARSH &copy; <span id="currentYear"></span> | Made With ❤️ | WRITE SIMPLY
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
