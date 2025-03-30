@@ -2,6 +2,8 @@
 
 A simple, clean, and minimalist web-based journal application.
 
+![Screenshort](images/monojournal.png)
+
 ## Description
 
 Monospace Journal allows users to create, edit, and delete journal entries directly in their web browser. It features a monospace font aesthetic for a focused writing experience. Posts are saved locally in the browser's storage, ensuring privacy and persistence across sessions.
